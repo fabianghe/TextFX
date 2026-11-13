@@ -1,0 +1,17 @@
+{
+  "name": "com.fabi.textfx",
+  "version": "1.0.0",
+  "displayName": "Text FX",
+  "description": "Per-letter TextMeshPro animations (wave, bounce, pulse, shake, shimmer) for a whole text or for marked-up words, plus a typewriter reveal. Allocation-free per frame.",
+  "unity": "2022.3",
+  "dependencies": {
+    "com.unity.ugui": "1.0.0"
+  },
+  "keywords": [
+    "textmeshpro",
+    "text",
+    "animation",
+    "wave",
+    "typewriter"
+  ]
+}
