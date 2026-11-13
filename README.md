@@ -1,6 +1,6 @@
 # Text FX
 
-Per-letter TextMeshPro animations for Unity: **Wave, Bounce, Pulse, Shake, Shimmer**, on a whole text or on marked-up words, plus a typewriter reveal. No dependencies beyond TextMeshPro (uGUI 2.0 / TMP 3.x). Nothing is allocated per frame.
+Per-letter TextMeshPro animations for Unity: **Wave, Bounce, Pulse, Pop, Shake, Shimmer**, on a whole text or on marked-up words, plus a typewriter reveal. No dependencies beyond TextMeshPro (uGUI 2.0 / TMP 3.x). Nothing is allocated per frame.
 
 ## Install
 
@@ -22,8 +22,8 @@ Add **Text FX Animator** to any GameObject with a `TextMeshProUGUI` or `TextMesh
 
 | Field | Meaning |
 |---|---|
-| Effect | Wave (bob up/down), Bounce (hop up from the baseline), Pulse (grow/shrink), Shake (tremble), Shimmer (colour drifts to Shimmer Color) |
-| Strength | Movement as a fraction of the font size (Pulse: scale change, 0.1 = 10%) |
+| Effect | Wave (bob up/down), Bounce (hop up from the baseline), Pulse (grow/shrink), Pop (grow and settle back, never smaller; good for button labels), Shake (tremble), Shimmer (colour drifts to Shimmer Color) |
+| Strength | Movement as a fraction of the font size (Pulse, Pop: scale change, 0.1 = 10%) |
 | Speed | Cycles per second |
 | Spread | Delay between neighbouring letters; 0 moves the text as one |
 

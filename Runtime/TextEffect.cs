@@ -11,6 +11,7 @@ namespace TextFX
         Pulse,
         Shake,
         Shimmer,
+        Pop,
     }
 
     /// <summary>How one effect moves or tints letters. Public fields so code can retune it at runtime.</summary>
@@ -21,10 +22,10 @@ namespace TextFX
         const float ShakeRate = 8f;
         const float ShakeSeedStep = 1.7f;
 
-        [Tooltip("Wave: letters bob up and down one after another. Bounce: letters hop up from the baseline. Pulse: letters swell and shrink. Shake: letters tremble. Shimmer: the colour drifts to Shimmer Color and back")]
+        [Tooltip("Wave: letters bob up and down one after another. Bounce: letters hop up from the baseline. Pulse: letters swell and shrink. Pop: letters grow and settle back to their size, never smaller. Shake: letters tremble. Shimmer: the colour drifts to Shimmer Color and back")]
         public TextEffect Effect = TextEffect.Wave;
 
-        [Range(0f, 0.5f), Tooltip("Wave, Bounce, Shake: how far letters move, as a fraction of the font size. Pulse: how much they grow (0.1 = 10%). Unused by Shimmer")]
+        [Range(0f, 0.5f), Tooltip("Wave, Bounce, Shake: how far letters move, as a fraction of the font size. Pulse, Pop: how much they grow (0.1 = 10%). Unused by Shimmer")]
         public float Strength = 0.06f;
 
         [Min(0f), Tooltip("Cycles per second")]
@@ -65,6 +66,9 @@ namespace TextFX
                     break;
                 case TextEffect.Pulse:
                     pose.Scale *= 1f + Mathf.Sin(phase) * Strength;
+                    break;
+                case TextEffect.Pop:
+                    pose.Scale *= 1f + (0.5f - 0.5f * Mathf.Cos(phase)) * Strength;
                     break;
                 case TextEffect.Shake:
                     float beat = time * Speed * ShakeRate;
