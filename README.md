@@ -13,7 +13,7 @@ In `Packages/manifest.json`, either a local checkout:
 or the git repo once it has a remote (pin a tag):
 
 ```json
-"com.fabi.textfx": "https://github.com/<owner>/TextFX.git#v1.0.0"
+"com.fabi.textfx": "https://github.com/fabianghe/TextFX.git#v1.1.0"
 ```
 
 ## Animate a whole text
